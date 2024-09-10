@@ -56,7 +56,7 @@ const AppContent: React.FC = () => {
 
   const handleUpdateData = (updatedData: Document[]) => {
     setData(updatedData);
-    setHasChanges(true); // Mark that there are changes
+    setHasChanges(true);
   };
   console.log(isSaving);
   return (
