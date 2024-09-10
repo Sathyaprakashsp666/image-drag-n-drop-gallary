@@ -17,7 +17,7 @@ Ensure you have the following installed before running the project:
 Clone the repository to your local machine:
 
 ```bash
-git clone https://github.com/your-username/your-repo.git
+git clone https://github.com/Sathyaprakashsp666/image-drag-n-drop-gallary.git
 cd your-repo
 npm install
 npm run dev
