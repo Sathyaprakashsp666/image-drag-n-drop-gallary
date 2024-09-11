@@ -11,7 +11,7 @@ const CardGrid: React.FC<CardGridProps> = ({
   const [draggedIndex, setDraggedIndex] = useState<number | null>(null);
 
   const handleDragStart = (
-    e: React.DragEvent<HTMLDivElement>,
+    _e: React.DragEvent<HTMLDivElement>,
     index: number
   ) => {
     setDraggedIndex(index);
@@ -19,7 +19,7 @@ const CardGrid: React.FC<CardGridProps> = ({
   };
 
   const handleDragEnter = (
-    e: React.DragEvent<HTMLDivElement>,
+    _e: React.DragEvent<HTMLDivElement>,
     index: number
   ) => {
     if (index !== draggedIndex) {
@@ -32,12 +32,11 @@ const CardGrid: React.FC<CardGridProps> = ({
     }
   };
 
-  const handleDragOver = (e: React.DragEvent<HTMLDivElement>) => {
-    e.preventDefault();
+  const handleDragOver = (_e: React.DragEvent<HTMLDivElement>) => {
+    _e.preventDefault();
   };
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const handleDrop = (e: React.DragEvent<HTMLDivElement>, index: number) => {
+  const handleDrop = () => {
     const updatedItems = data.map((item, idx) => ({
       ...item,
       position: idx,
